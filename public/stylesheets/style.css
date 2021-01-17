@@ -1,45 +1,37 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
+  padding-top: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00b7ff;
 }
 
 .title {
   text-align: center;
 }
 
-/* Style the navbar */
-#navbar {
-  overflow: hidden;
-  background-color: #333;
+a {
+  color: black;
 }
 
-/* Navbar links */
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
+.nav span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.nav-item {
+  vertical-align: middle;
   text-align: center;
-  padding: 14px;
-  text-decoration: none;
 }
 
-/* Page content */
-.content {
-  padding: 16px;
+p .nav-item {
+  vertical-align: middle;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
+.footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
 }
