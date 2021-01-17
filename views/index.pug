@@ -1,8 +1,7 @@
 extends layout
 
 block content
-  h1(class='title')= 'Alex and Becky'
-  .div(style="padding: 10px")
+  h1.title Alex and Becky
   .nav
     .col-md-3
       hr
@@ -23,3 +22,5 @@ block content
         a(href='#') Media
     .col-md-3
       hr
+  .image-container
+    img(src="images/healey.jpg", alt="Healey Barn").img-fluid

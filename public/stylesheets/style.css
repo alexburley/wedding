@@ -1,15 +1,14 @@
 body {
-  /* padding: 50px; */
   padding-top: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.title {
-  text-align: center;
-}
-
 a {
   color: black;
+}
+
+.wspace {
+  padding: 10px 0px 10px 0px;
 }
 
 .nav span {
@@ -25,6 +24,17 @@ a {
 
 p .nav-item {
   vertical-align: middle;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.image-container {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 20px;
 }
 
 .footer {
