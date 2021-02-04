@@ -25,9 +25,11 @@ const authCookie = "wedding-auth-token";
 
 app.use("/", router);
 
-router.get("/", (req, res, next) => {
-  const authorised = req.cookies[authCookie];
-  res.render("index", { authorised });
+router.get("/", (req, res) => {
+  const token = req.cookies[authCookie];
+  const authorised = token && jwt.verify(token, accessTokenSecret);
+  console.log(authorised, accessTokenSecret);
+  res.render("index", { authorised: token });
 });
 
 router.post("/login", (req, res) => {
@@ -35,9 +37,13 @@ router.post("/login", (req, res) => {
   if (password === thePassword) {
     //TODO: If remember me then set expiry to 30 days
     const token = jwt.sign({}, accessTokenSecret, { expiresIn: "1h" });
-    res.cookie("wedding-auth-token", token);
-  } else {
+    res.cookie(authCookie, token);
   }
+  res.redirect("/");
+});
+
+router.post("/logout", (req, res) => {
+  res.clearCookie(authCookie);
   res.redirect("/");
 });
 
@@ -49,6 +55,7 @@ app.use(function (err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
   res.status(err.status || 500);
+  console.log(err);
   res.render("error");
 });
 
