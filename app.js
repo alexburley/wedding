@@ -2,6 +2,8 @@ const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
+const jwt = require("jsonwebtoken");
 const logger = require("morgan");
 
 const app = express();
@@ -10,13 +12,33 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", (req, res, next) => {
-  res.render("index", { auth: false });
+const router = express.Router();
+
+const accessTokenSecret = "therootsecret";
+const thePassword = "foo";
+const authCookie = "wedding-auth-token";
+
+app.use("/", router);
+
+router.get("/", (req, res, next) => {
+  const authorised = req.cookies[authCookie];
+  res.render("index", { authorised });
+});
+
+router.post("/login", (req, res) => {
+  const password = req.body.password;
+  if (password === thePassword) {
+    //TODO: If remember me then set expiry to 30 days
+    const token = jwt.sign({}, accessTokenSecret, { expiresIn: "1h" });
+    res.cookie("wedding-auth-token", token);
+  } else {
+  }
+  res.redirect("/");
 });
 
 app.use(function (req, res, next) {
