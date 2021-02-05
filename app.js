@@ -28,8 +28,7 @@ app.use("/", router);
 router.get("/", (req, res) => {
   const token = req.cookies[authCookie];
   const authorised = token && jwt.verify(token, accessTokenSecret);
-  console.log(authorised, accessTokenSecret);
-  res.render("index", { authorised: token });
+  res.render("index", { authorised });
 });
 
 router.post("/login", (req, res) => {
@@ -45,10 +44,6 @@ router.post("/login", (req, res) => {
 router.post("/logout", (req, res) => {
   res.clearCookie(authCookie);
   res.redirect("/");
-});
-
-app.use(function (req, res, next) {
-  next(createError(404));
 });
 
 app.use(function (err, req, res, next) {
