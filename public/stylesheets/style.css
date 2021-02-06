@@ -69,7 +69,15 @@ p .nav-item {
 .image-container {
   text-align: center;
   padding-top: 25px;
-  padding-bottom: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.main {
 }
 
 .footer {
