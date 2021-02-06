@@ -27,16 +27,25 @@ app.use("/", router);
 
 router.get("/", (req, res) => {
   const token = req.cookies[authCookie];
-  const authorised = token && jwt.verify(token, accessTokenSecret);
-  res.render("index", { authorised });
+
+  try {
+    const authorised = token && jwt.verify(token, accessTokenSecret);
+    res.render("index", { authorised });
+  } catch (err) {
+    res.render("index", { authorised: false });
+  }
 });
 
 router.post("/login", (req, res) => {
   const password = req.body.password;
   if (password === thePassword) {
-    //TODO: If remember me then set expiry to 30 days
-    const token = jwt.sign({}, accessTokenSecret, { expiresIn: "1h" });
-    res.cookie(authCookie, token);
+    const hasCheckedRemember = req.body.remember;
+    const expiresIn = hasCheckedRemember ? "30d" : "1h";
+    const token = jwt.sign({}, accessTokenSecret, { expiresIn });
+    const options = hasCheckedRemember
+      ? { maxAge: 30 * 24 * 60 * 60 * 1000 }
+      : {};
+    res.cookie(authCookie, token, options);
   }
   res.redirect("/");
 });

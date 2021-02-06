@@ -5,7 +5,7 @@ html
 		meta(name='viewport', content="width=device-width, initial-scale=1")
 		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", crossorigin="anonymous")
 		link(rel='stylesheet', href='/stylesheets/style.css')
-		script(src='../../dist/js/bootstrap.min.js')
+		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js')
 	body
 		.container
 			if (authorised)
@@ -17,7 +17,7 @@ html
 					input#inputPassword.form-control(type='password' name='password' placeholder='Password' required='')
 					.checkbox.mb-3(style='padding: 20px 0px 0px 0px')
 						label(data-children-count='1')
-						input(type='checkbox' value='remember-me')
+						input(type='checkbox' value='remember', name='remember')
 						|  Remember me
 					button.btn.btn-lg.btn-primary.btn-block(type='submit') Login
 	footer.footer
