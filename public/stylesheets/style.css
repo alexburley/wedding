@@ -49,7 +49,6 @@ form {
 .nav span {
   display: inline-block;
   vertical-align: middle;
-  line-height: normal;
 }
 
 .nav-item {
@@ -72,12 +71,8 @@ p .nav-item {
 }
 
 .image-container img {
-  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-}
-
-.main {
 }
 
 .footer {
