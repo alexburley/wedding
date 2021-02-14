@@ -2,13 +2,23 @@
 
 const app = require("../app");
 const debug = require("debug")("wedding:server");
-const http = require("http");
+const env = require("../env");
+
+const fs = require("fs");
+const https = require("https");
+const key = fs.readFileSync(__dirname + "/../certs/wedding.key");
+const cert = fs.readFileSync(__dirname + "/../certs/wedding.crt");
+const options = {
+  key: key,
+  cert: cert,
+  passphrase: env.passphrase,
+};
 
 const port = normalizePort(process.env.PORT || "3000");
 app.set("port", port);
 console.log("Listening on port: ", port);
 
-const server = http.createServer(app);
+const server = https.createServer(options, app);
 
 server.listen(port);
 server.on("error", onError);

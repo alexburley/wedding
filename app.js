@@ -1,4 +1,5 @@
 const express = require("express");
+const env = require("./env");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
@@ -18,15 +19,14 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const router = express.Router();
 
-const accessTokenSecret = "therootsecret";
-const thePassword = "foo";
+const accessTokenSecret = env.accessTokenSecret;
+const thePassword = env.thePassword;
 const authCookie = "wedding-auth-token";
 
 app.use("/", router);
 
 router.get("/", (req, res) => {
   const token = req.cookies[authCookie];
-
   try {
     const authorised = token && jwt.verify(token, accessTokenSecret);
     res.render("index", { authorised });

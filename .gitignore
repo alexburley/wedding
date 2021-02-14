@@ -1,3 +1,5 @@
 node_modules
 .env.js
 my-key.pem
+certs/
+env.js
