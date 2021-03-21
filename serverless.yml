@@ -5,6 +5,8 @@ provider:
   runtime: nodejs12.x
   stage: main
   region: eu-west-2
+  apiGateway:
+    shouldStartNameWithService: true
 functions:
   app:
     handler: "./handler.handler"
@@ -15,3 +17,11 @@ functions:
       - http:
           method: ANY
           path: "{proxy+}"
+plugins:
+  - serverless-domain-manager
+custom:
+  customDomain:
+    domainName: "burleywedding.co.uk"
+    certificateArn: "arn:aws:acm:us-east-1:557482387627:certificate/d53c7440-8b36-4fa1-a20e-68c3b8369cf9"
+    stage: main
+    createRoute53Record: true

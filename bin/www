@@ -6,8 +6,8 @@ const env = require("../env");
 
 const fs = require("fs");
 const https = require("https");
-const key = fs.readFileSync(__dirname + "/../certs/wedding.key");
-const cert = fs.readFileSync(__dirname + "/../certs/wedding.crt");
+const key = fs.readFileSync(__dirname + "/../certs/certs/wedding.key");
+const cert = fs.readFileSync(__dirname + "/../certs/certs/wedding.crt");
 const options = {
   key: key,
   cert: cert,

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "start:debug": "DEBUG=wedding:* npm start"
+    "start:debug": "DEBUG=wedding:* npm start",
+    "deploy": "sls deploy --force"
   },
   "dependencies": {
     "@vendia/serverless-express": "^4.3.4",
@@ -23,6 +24,7 @@
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
-    "serverless": "^2.30.3"
+    "serverless": "^2.30.3",
+    "serverless-domain-manager": "^5.1.0"
   }
 }

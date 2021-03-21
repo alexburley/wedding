@@ -29,9 +29,9 @@ router.get("/", (req, res) => {
   const token = req.cookies[authCookie];
   try {
     const authorised = token && jwt.verify(token, accessTokenSecret);
-    res.render("index", { authorised });
+    res.render("content", { authorised });
   } catch (err) {
-    res.render("index", { authorised: false });
+    res.render("content", { authorised: false });
   }
 });
 
