@@ -9,7 +9,7 @@ provider:
     shouldStartNameWithService: true
 functions:
   app:
-    handler: "./handler.handler"
+    handler: "./src/website.handler"
     events:
       - http:
           method: ANY

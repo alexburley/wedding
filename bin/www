@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const app = require("../app");
+const app = require("../src/website/app");
 const debug = require("debug")("wedding:server");
-const env = require("../env");
+const env = require("../src/website/env");
 
 const fs = require("fs");
 const https = require("https");
