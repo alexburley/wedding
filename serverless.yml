@@ -25,3 +25,4 @@ custom:
     certificateArn: "arn:aws:acm:us-east-1:557482387627:certificate/d53c7440-8b36-4fa1-a20e-68c3b8369cf9"
     stage: main
     createRoute53Record: true
+    autoDomain: true
