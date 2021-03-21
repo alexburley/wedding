@@ -15,7 +15,6 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "../public")));
 
 const router = express.Router();
 
@@ -48,6 +47,8 @@ router.post("/login", (req, res) => {
   }
   res.redirect("/");
 });
+
+app.use("/public", express.static(path.join(__dirname, "../public")));
 
 router.post("/logout", (req, res) => {
   res.clearCookie(authCookie);
