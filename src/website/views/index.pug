@@ -68,10 +68,11 @@ html
     include styles/login.style.pug
     include styles/home.style.pug
   body
-    .container
+    main.container
       if (authorised)
         include home.pug
       else
         include login.pug
-  footer.footer
-    span.text-muted 2021
+    footer.footer
+      .container
+        span.text-muted 2021

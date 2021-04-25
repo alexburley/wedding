@@ -4,3 +4,4 @@ my-key.pem
 certs/
 env.js
 .serverless
+dist/
