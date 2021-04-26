@@ -13,19 +13,13 @@
 .header
   .navbar 
     .nav
-      .col-md.nav-item
-        span
+      .row
+        .col
           a(href="/") Home
-      //- .col-md.nav-item
-      //-   span
-      //-     a(href="#") Media
-      .col-md.nav-item
-        span
+        .col
           a(href="/registry") Registry
-      .col-md.nav-item
-        span
+        .col
           a(href="/rsvp") RSVP
-      .col-md.nav-item
-        span
+        .col
           form.inline(method="post", action="/logout")
             button.link-button(type="submit", name="submit", value="submit") Logout
