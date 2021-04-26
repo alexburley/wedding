@@ -70,13 +70,13 @@ html
   body
     main
       if (authorised)
+        include nav.pug
         if (rsvp)
           include rsvp.pug
+        else if (registry)
+          include registry.pug
         else
           include home.pug
       else
         include login.pug
-    .blocker
-    footer.footer
-      .container
-        span.text-muted 2021
+      include footer.pug

@@ -44,6 +44,16 @@ router.get("/rsvp", (req, res) => {
   }
 });
 
+router.get("/registry", (req, res) => {
+  const token = req.cookies[authCookie];
+  try {
+    const authorised = token && jwt.verify(token, accessTokenSecret);
+    res.render("index", { authorised, registry: true });
+  } catch (err) {
+    res.render("index", { authorised: false });
+  }
+});
+
 router.post("/login", (req, res) => {
   const password = req.body.password;
   if (password === thePassword) {
