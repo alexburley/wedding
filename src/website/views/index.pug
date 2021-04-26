@@ -70,7 +70,10 @@ html
   body
     main
       if (authorised)
-        include home.pug
+        if (rsvp)
+          include rsvp.pug
+        else
+          include home.pug
       else
         include login.pug
     .blocker
