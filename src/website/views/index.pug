@@ -42,10 +42,10 @@ html
       sizes="16x16",
       href="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/meta/favicon-16x16.png"
     )
-    link(
-      rel="manifest",
-      href="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/meta/site.webmanifest"
-    )
+    //- link(
+    //-   rel="manifest",
+    //-   href="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/meta/site.webmanifest"
+    //- )
     link(
       rel="mask-icon",
       href="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/meta/safari-pinned-tab.svg",
@@ -77,6 +77,6 @@ html
           include registry.pug
         else
           include home.pug
+        include footer.pug
       else
         include login.pug
-      include footer.pug
