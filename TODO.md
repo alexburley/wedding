@@ -1,6 +1,10 @@
 - Upload secret to SSM and boot on startup
 - Make sure logs are disabled
 
+## Registry
+
+- Design Page
+- Link to registry
 
 ## RSVP
 
