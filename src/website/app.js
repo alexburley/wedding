@@ -19,7 +19,7 @@ app.use(cookieParser());
 const router = express.Router();
 
 const accessTokenSecret = env.accessTokenSecret;
-const thePassword = env.thePassword;
+const passphrase = env.passphrase;
 const authCookie = "wedding-auth-token";
 
 app.use("/", router);
@@ -56,7 +56,7 @@ router.get("/registry", (req, res) => {
 
 router.post("/login", (req, res) => {
   const password = req.body.password;
-  if (password === thePassword) {
+  if (password === passphrase) {
     const hasCheckedRemember = req.body.remember;
     const expiresIn = hasCheckedRemember ? "30d" : "1h";
     const token = jwt.sign({}, accessTokenSecret, { expiresIn });
