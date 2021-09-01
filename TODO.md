@@ -1,0 +1,2 @@
+- Upload secret to SSM and boot on startup
+- Make sure logs are disabled
