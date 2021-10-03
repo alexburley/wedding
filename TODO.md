@@ -11,6 +11,10 @@ Parking
 Dress Code
 Itinerary / Order of the day
 
+## Nav
+
+Navbar responsiveness
+
 ## Travel / Accomodation
 
 ## Home

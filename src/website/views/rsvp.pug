@@ -5,13 +5,18 @@ style.
     font-weight: 0.5;
     font-size: 1.2rem;
   }
-.container.rsvp-container
-  .help-text-container
-    p Our RSVP form should appear below. If it does not load or you have any issues please contact:
-    p
-      b
-        a(href="mailto:alexburley3@gmail.com") alexburley3@gmail.com
-  script(
-    type="text/javascript",
-    src="https://form.jotform.com/jsform/211176227335047"
-  )
+  .no-padding {
+    padding: 0px;
+  }
+.main
+  .container.rsvp-container
+    .help-text-container
+      p Our RSVP form should appear below. If it does not load or you have any issues please contact:
+      p
+        b
+          a(href="mailto:alexburley3@gmail.com") alexburley3@gmail.com
+    .card.no-padding
+      script(
+        type="text/javascript",
+        src="https://form.jotform.com/jsform/211176227335047"
+      )
