@@ -1,33 +1,87 @@
+style.
+  .screen {
+    height: 70vh;
+    padding-top: 60px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .home-invite {
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+    min-width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+
+  .home-invite:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .home-invite-address {
+    font-style: oblique;
+  }
+
+  .home-invite-time {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .venue-screen {
+    margin: auto;
+  }
+
+  .venue-screen img {
+    width: 100%;
+    border: 1px solid grey;
+  }
+
+  .accomodation-description {
+    font-size: 16px;
+    padding-bottom: 50px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .accomodation-list {
+    font-size: 1rem;
+  }
+
+  .taxis-intro {
+    padding-bottom: 20px;
+    width: 80%;
+    margin: auto;
+  }
 .container
-  .home-gutter
-  .screen.invite-screen
-    .row.justify-content-center
-      .col-md-6.home-invite.home-text-general
-        h4 You are invited to our wedding on July 23rd, 2022
-        h5 at
-        h4 Healey Barn
-        .home-invite-address
-          p 
-          | Healey
-          br
-          | Riding Mill
-          br
-          | Northumberland
-          br 
-          | NE44 6BN
-          br
-          | 01434 400 044 / 01434 682 569
-        .home-invite-time
-          p Ceremony 2:00PM
-          p Reception 7:30PM
-  .screen.venue-screen
-    .row.justify-content-center
-      .col-md-8.home-venue
-        h4#venue Venue
-        a(href="https://crippsandco.com/healey-barn", target="_blank")
-          img(
-            src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey.jpg"
-          )
+  //- .screen.invite-screen
+  //-   .row.justify-content-center
+  //-     .col-md-6.home-invite.home-text-general
+  //-       h4 You are invited to our wedding on July 23rd, 2022
+  //-       h5 at
+  //-       h4 Healey Barn
+  //-       .home-invite-address
+  //-         p 
+  //-         | Healey
+  //-         br
+  //-         | Riding Mill
+  //-         br
+  //-         | Northumberland
+  //-         br 
+  //-         | NE44 6BN
+  //-         br
+  //-         | 01434 400 044 / 01434 682 569
+  //-       .home-invite-time
+  //-         p Ceremony 2:00PM
+  //-         p Reception 7:30PM
+  //- .screen.venue-screen
+  //-   .row.justify-content-center
+  //-     .col-md-8.home-venue
+  //-       h4#venue Venue
+  //-       a(href="https://crippsandco.com/healey-barn", target="_blank")
+  //-         img(
+  //-           src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey.jpg"
+  //-         )
   //- .screen.accomodation-screen
   //-   .col-md-12.home-invite.home-text-general
   //-     h4#accomodation Accomodation
@@ -123,4 +177,3 @@
   //-         br
   //-         a(href="mailto:beckypowell84@gmail.com") beckypowell84@gmail.com
   //-         span &nbsp 07743382195
-  .home-gutter

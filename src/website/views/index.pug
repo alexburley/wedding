@@ -51,9 +51,14 @@ html
       href="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/meta/safari-pinned-tab.svg",
       color="#5bbad5"
     )
+    link(rel="preconnect", href="https://fonts.googleapis.com")
     link(rel="preconnect", href="https://fonts.gstatic.com")
     link(
       href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&display=swap",
+      rel="stylesheet"
+    )
+    link(
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap",
       rel="stylesheet"
     )
     link(rel="preconnect", href="https://fonts.gstatic.com")
@@ -64,9 +69,6 @@ html
     meta(name="msapplication-TileColor", content="#da532c")
     meta(name="theme-color", content="#ffffff")
     include styles/root.style.pug
-    include styles/nav.style.pug
-    include styles/login.style.pug
-    include styles/home.style.pug
   body
     main
       if (authorised)

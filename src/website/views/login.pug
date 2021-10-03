@@ -1,3 +1,53 @@
+style.
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+    display: block;
+    font-family: 'Karla', 'serif';
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .form-title {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .form-signin input[type='email'] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .form-c-box {
+    padding: 20px 0px 0px 0px;
+  }
 form.form-signin(data-children-count="3", action="/login", method="POST")
   h3.mb-3.font-weight-normal.form-title Login
   label.sr-only(for="inputPassword") Password

@@ -1,6 +1,15 @@
 - Upload secret to SSM and boot on startup
 - Make sure logs are disabled
 
+## Home
+
+- Blur nav bar
+- Finish invite based on design sent out
+- Fix nav links to anchors
+- Add accomodation
+- Add Taxis
+- Add contact us
+- 
 ## Registry
 
 - Design Page
