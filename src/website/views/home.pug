@@ -1,24 +1,19 @@
 style.
   .main {
     background-color: #ffff;
+    padding-top: 0px;
   }
 
   .home-invite {
     text-align: center;
     padding: 50px;
-    height: 70vh;
     margin: auto;
-    min-width: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
   }
 
   .home-invite:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .screen {
-    height: 85vh;
   }
 
   .anchor-float {
@@ -32,13 +27,21 @@ style.
   .venue-container {
   }
 
+  @media (min-width: 768px) {
+    .nav {
+      font-size: 20px;
+    }
+  }
+
   .venue-container img {
     //- width: 100vw;
-    height: 85vh;
+    //- min-height: 85vh;
+    max-width: 100vw;
   }
 
   .accomodation-container {
     padding-top: 50px;
+    box-sizing: content-box;
   }
 
   .full-width {
@@ -52,7 +55,13 @@ style.
   }
 
 .container.main
-  .invite-container.screen
+  .venue-container.full-width
+    #venue.anchor-float
+    a(href="https://crippsandco.com/healey-barn", target="_blank")
+      img(
+        src="https://images.squarespace-cdn.com/content/v1/5936ca4aa5790a4e6845045a/1544725075699-1QJ8HP9LQFV5EBDD0XXE/healey-barn-views.jpg?format=2500w"
+      )
+  .invite-container
     #invite.anchor-float
     .row.justify-content-center
       .col-md-6.home-invite.home-text-general
@@ -73,13 +82,13 @@ style.
         .home-invite-time
           p Ceremony 2:00PM
           p Reception 7:30PM
-  .venue-container.screen.full-width
+  .venue-container.full-width
     #venue.anchor-float
     a(href="https://crippsandco.com/healey-barn", target="_blank")
       img(
-        src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey.jpg"
+        src="https://images.squarespace-cdn.com/content/v1/5936ca4aa5790a4e6845045a/1565010085848-XK78ADBGK232FAKRIPYR/_A7R7912-Edit-Edit+Richard+Kenworthy+Jan+2019+%286%29healey%2Bbarn%2Bnorthumberland%2Bwedding%2Bvenue.jpg?format=2500w"
       )
-  .accomodation-container.screen
+  .accomodation-container
     #accomodation.anchor-float
     .col-md-12.home-invite.home-text-general
       h4 Accomodation
