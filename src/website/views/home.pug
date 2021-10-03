@@ -1,14 +1,12 @@
 style.
-  .screen {
-    height: 70vh;
-    padding-top: 60px;
-    text-align: center;
-    overflow: hidden;
+  .main {
+    background-color: #ffff;
   }
 
   .home-invite {
     text-align: center;
     padding: 50px;
+    height: 70vh;
     margin: auto;
     min-width: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -19,132 +17,132 @@ style.
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .home-invite-address {
-    font-style: oblique;
+  .screen {
+    height: 85vh;
   }
 
-  .home-invite-time {
-    font-size: 20px;
-    font-weight: bold;
+  .anchor-float {
+    top: -10vh;
+    position: relative;
   }
 
-  .venue-screen {
-    margin: auto;
+  .invite-container {
   }
 
-  .venue-screen img {
-    width: 100%;
-    border: 1px solid grey;
+  .venue-container {
   }
 
-  .accomodation-description {
-    font-size: 16px;
-    padding-bottom: 50px;
-    width: 80%;
-    margin: auto;
+  .venue-container img {
+    //- width: 100vw;
+    height: 85vh;
   }
 
-  .accomodation-list {
-    font-size: 1rem;
+  .accomodation-container {
+    padding-top: 50px;
   }
 
-  .taxis-intro {
-    padding-bottom: 20px;
-    width: 80%;
-    margin: auto;
+  .full-width {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
   }
-.container
-  //- .screen.invite-screen
-  //-   .row.justify-content-center
-  //-     .col-md-6.home-invite.home-text-general
-  //-       h4 You are invited to our wedding on July 23rd, 2022
-  //-       h5 at
-  //-       h4 Healey Barn
-  //-       .home-invite-address
-  //-         p 
-  //-         | Healey
-  //-         br
-  //-         | Riding Mill
-  //-         br
-  //-         | Northumberland
-  //-         br 
-  //-         | NE44 6BN
-  //-         br
-  //-         | 01434 400 044 / 01434 682 569
-  //-       .home-invite-time
-  //-         p Ceremony 2:00PM
-  //-         p Reception 7:30PM
-  //- .screen.venue-screen
-  //-   .row.justify-content-center
-  //-     .col-md-8.home-venue
-  //-       h4#venue Venue
-  //-       a(href="https://crippsandco.com/healey-barn", target="_blank")
-  //-         img(
-  //-           src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey.jpg"
-  //-         )
-  //- .screen.accomodation-screen
-  //-   .col-md-12.home-invite.home-text-general
-  //-     h4#accomodation Accomodation
-  //-     .accomodation-description
-  //-       span We have listed some hotels for your conveniance, more hotels can be found closer to Newcastle which might offer flexilibity at the cost of a longer journey.
-  //-       |
-  //-       | You can find the hotels listed and more accomodation options on the
-  //-       |
-  //-       a(
-  //-         href="https://crippsandco.com/healey-barn/accommodation",
-  //-         style="font-weight: bold"
-  //-       ) Healey Barn website
-  //-       | .
-  //-     .accomodation-list
-  //-       .row.justify-content-center
-  //-         .col-md-4
-  //-           span Slaley Hall Hotel (7 miles)
-  //-           p 
-  //-             a(href="https://www.slaleyhallhotel.com", target="_blank") https://www.slaleyhallhotel.com
-  //-           br
-  //-           span Beaumont Hotel (7 miles)
-  //-           p 
-  //-             a(href="https://www.thebeaumonthexham.co.uk", target="_blank") https://www.thebeaumonthexham.co.uk
-  //-           br
-  //-           span Derwent Manor Hotel (8 miles)
-  //-           p 
-  //-             a(
-  //-               href="https://www.bw-derwentmanorhotel.co.uk/",
-  //-               target="_blank"
-  //-             ) https://www.bw-derwentmanorhotel.co.uk/
-  //-           br
-  //-           span The Angel Inn (8 miles)
-  //-           p 
-  //-             a(href="https://www.theangelofcorbridge.com", target="_blank") https://www.theangelofcorbridge.com
-  //-           br
-  //-         .col-md-4
-  //-           span The Anchor Inn (5 miles)
-  //-           p 
-  //-             a(
-  //-               href="https://www.theanchorinnwhittonstall.co.uk",
-  //-               target="_blank"
-  //-             ) https://www.theanchorinnwhittonstall.co.uk
-  //-           br
-  //-           span The Duke of Wellington Inn (5 miles)
-  //-           p 
-  //-             a(
-  //-               href="https://www.thedukeofwellingtoninn.co.uk",
-  //-               target="_blank"
-  //-             ) https://www.thedukeofwellingtoninn.co.uk
-  //-           br
-  //-           span Lord Crewe Arms Hotel (10 miles)
-  //-           p 
-  //-             a(
-  //-               href="https://www.lordcrewearmsblanchland.co.uk",
-  //-               target="_blank"
-  //-             ) https://lordcrewearmsblanchland.co.uk
-  //-           br
-  //-           span The George Hotel (15 miles)
-  //-           p 
-  //-             a(
-  //-               href="https://bespokehotels.com/the-george-hotel",
-  //-               target="_blank"
-  //-             ) https://bespokehotels.com/the-george-hotel
+
+.container.main
+  .invite-container.screen
+    #invite.anchor-float
+    .row.justify-content-center
+      .col-md-6.home-invite.home-text-general
+        h4 You are invited to our wedding on July 23rd, 2022
+        h5 at
+        h4 Healey Barn
+        .home-invite-address
+          p 
+          | Healey
+          br
+          | Riding Mill
+          br
+          | Northumberland
+          br 
+          | NE44 6BN
+          br
+          | 01434 400 044 / 01434 682 569
+        .home-invite-time
+          p Ceremony 2:00PM
+          p Reception 7:30PM
+  .venue-container.screen.full-width
+    #venue.anchor-float
+    a(href="https://crippsandco.com/healey-barn", target="_blank")
+      img(
+        src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey.jpg"
+      )
+  .accomodation-container.screen
+    #accomodation.anchor-float
+    .col-md-12.home-invite.home-text-general
+      h4 Accomodation
+      .accomodation-description
+        span We have listed some hotels for your conveniance, more hotels can be found closer to Newcastle which might offer flexilibity at the cost of a longer journey.
+        |
+        | You can find the hotels listed and more accomodation options on the
+        |
+        a(
+          href="https://crippsandco.com/healey-barn/accommodation",
+          style="font-weight: bold"
+        ) Healey Barn website
+        | .
+      .accomodation-list
+        .row.justify-content-center
+          .col-md-4
+            span Slaley Hall Hotel (7 miles)
+            p 
+              a(href="https://www.slaleyhallhotel.com", target="_blank") https://www.slaleyhallhotel.com
+            br
+            span Beaumont Hotel (7 miles)
+            p 
+              a(href="https://www.thebeaumonthexham.co.uk", target="_blank") https://www.thebeaumonthexham.co.uk
+            br
+            span Derwent Manor Hotel (8 miles)
+            p 
+              a(
+                href="https://www.bw-derwentmanorhotel.co.uk/",
+                target="_blank"
+              ) https://www.bw-derwentmanorhotel.co.uk/
+            br
+            span The Angel Inn (8 miles)
+            p 
+              a(href="https://www.theangelofcorbridge.com", target="_blank") https://www.theangelofcorbridge.com
+            br
+          .col-md-4
+            span The Anchor Inn (5 miles)
+            p 
+              a(
+                href="https://www.theanchorinnwhittonstall.co.uk",
+                target="_blank"
+              ) https://www.theanchorinnwhittonstall.co.uk
+            br
+            span The Duke of Wellington Inn (5 miles)
+            p 
+              a(
+                href="https://www.thedukeofwellingtoninn.co.uk",
+                target="_blank"
+              ) https://www.thedukeofwellingtoninn.co.uk
+            br
+            span Lord Crewe Arms Hotel (10 miles)
+            p 
+              a(
+                href="https://www.lordcrewearmsblanchland.co.uk",
+                target="_blank"
+              ) https://lordcrewearmsblanchland.co.uk
+            br
+            span The George Hotel (15 miles)
+            p 
+              a(
+                href="https://bespokehotels.com/the-george-hotel",
+                target="_blank"
+              ) https://bespokehotels.com/the-george-hotel
 
   //- .screen.taxis-screen
   //-   .row.justify-content-center
