@@ -29,7 +29,8 @@ style.
               )
                 .question
                   | #{faq.question}
-          .collapse(id='collapse' + index)(
+          .collapse(
+            id='collapse' + index,
             aria-labelledby='heading' + index,
             data-parent="#accordion"
           )
