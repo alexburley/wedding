@@ -41,6 +41,10 @@ style.
     }
   }
 
+  .nav-item {
+    text-align: center;
+  }
+
   .title {
     text-align: center;
     font-weight: 500;
@@ -73,14 +77,14 @@ style.
   .navbar 
     .nav
       .row
-        .col
+        .col.nav-item
           a(href="/") Home
-        .col
-          a(href="/registry") Travel
-        .col
+        .col.nav-item
+          a(href="/registry") Travel and Accomodation
+        .col.nav-item
           a(href="/registry") Questions
-        .col
+        .col.nav-item
           a(href="/rsvp") RSVP
-        .col
+        .col.nav-item
           form.inline(method="post", action="/logout")
             button.link-button(type="submit", name="submit", value="submit") Logout

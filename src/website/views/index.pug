@@ -72,13 +72,13 @@ html
   body
     main
       if (authorised)
-        include nav.pug
+        include components/nav.pug
         if (rsvp)
-          include rsvp.pug
+          include pages/rsvp.pug
         else if (registry)
-          include registry.pug
+          include pages/registry.pug
         else
-          include home.pug
-        include footer.pug
+          include pages/home.pug
+        include components/footer.pug
       else
-        include login.pug
+        include pages/login.pug
