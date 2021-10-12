@@ -75,6 +75,8 @@ html
         include components/nav.pug
         if (rsvp)
           include pages/rsvp.pug
+        else if (questions)
+          include pages/questions.pug
         else if (registry)
           include pages/registry.pug
         else if (travel)

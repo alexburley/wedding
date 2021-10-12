@@ -22,7 +22,6 @@ Navbar responsiveness
 - Blur nav bar
 - Finish invite based on design sent out
 - Fix nav links to anchors
-- Update image to be window one from website
 - Make
 - Add accomodation
 - Add Taxis
