@@ -4,8 +4,36 @@ style.
     margin: auto;
   }
 
+  .travel-card {
+    min-width: 300px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .page-anchor {
+    margin-top: -7.5vh;
+    height: 7.5vh;
+  }
+
+  .page-footer {
+    width: 100%;
+    position: sticky;
+    background-color: #faf9f6;
+    border-top: 1px solid #d3d3d3;
+    padding: 20px 0px;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+  }
+
+  ul > li {
+    display: inline-block;
+  }
+
+#travel-top.page-anchor
 .container.section-container
-  .content-card
+  #travel-accomodation.page-anchor
+  .content-card.travel-card
     h2 Accomodation
     br
     .col-md-8.accomodation-intro
@@ -63,3 +91,66 @@ style.
         span The George Hotel (15 miles)
         p 
           a(href="https://bespokehotels.com/the-george-hotel", target="_blank") https://bespokehotels.com/the-george-hotel
+  br
+  #travel-taxis.page-anchor
+  .content-card.travel-card
+    h2 Taxis
+    br
+    .col-md-8.accomodation-intro
+      span 
+      | We recommend you book a taxi from the venue in advance as the signal is not great
+      | once you are there.
+      | Here are some local taxi numbers.
+    br
+    br
+    .row
+      .col
+        span Slaley Hall Hotel (7 miles)
+        p 
+          a(href="https://www.slaleyhallhotel.com", target="_blank") https://www.slaleyhallhotel.com
+        br
+      .col
+        span Beaumont Hotel (7 miles)
+        p 
+          a(href="https://www.thebeaumonthexham.co.uk", target="_blank") https://www.thebeaumonthexham.co.uk
+        br
+    .row
+      .col
+        span Derwent Manor Hotel (8 miles)
+        p 
+          a(href="https://www.bw-derwentmanorhotel.co.uk/", target="_blank") https://www.bw-derwentmanorhotel.co.uk/
+        br
+      .col
+        span The Angel Inn (8 miles)
+        p 
+          a(href="https://www.theangelofcorbridge.com", target="_blank") https://www.theangelofcorbridge.com
+        br
+    .row
+      .col
+        span The Anchor Inn (5 miles)
+        p 
+          a(href="https://www.theanchorinnwhittonstall.co.uk", target="_blank") https://www.theanchorinnwhittonstall.co.uk
+        br
+      .col
+        span The Duke of Wellington Inn (5 miles)
+        p 
+          a(href="https://www.thedukeofwellingtoninn.co.uk", target="_blank") https://www.thedukeofwellingtoninn.co.uk
+        br
+    .row
+      .col
+        span Lord Crewe Arms Hotel (10 miles)
+        p 
+          a(href="https://www.lordcrewearmsblanchland.co.uk", target="_blank") https://lordcrewearmsblanchland.co.uk
+        br
+      .col
+        span The George Hotel (15 miles)
+        p 
+          a(href="https://bespokehotels.com/the-george-hotel", target="_blank") https://bespokehotels.com/the-george-hotel
+.page-footer 
+  .row 
+    .col
+      a(href="#travel-top") Back to Top
+    .col 
+      a(href="#travel-accomodation") Accomodations
+    .col 
+      a(href="#travel-taxis") Taxis
