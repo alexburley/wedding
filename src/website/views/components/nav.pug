@@ -57,6 +57,14 @@ style.
     flex: 1 1 20px;
   }
 
+  .active {
+    border-bottom: solid #228b22 3px;
+  }
+
+  .nav-item a {
+    padding-bottom: 2px;
+  }
+
   .nav .title {
     text-align: center;
     font-weight: 500;
@@ -90,15 +98,15 @@ style.
   .navbar 
     .nav
       .nav-item
-        a(href="/") Home
+        a(href="/", class=travel || questions || registry || rsvp ? '' : 'active') Home
       .nav-item
-        a(href="/travel") Travel and Accomodation
+        a(href="/travel", class=travel && 'active') Travel and Accomodation
       .nav-item
-        a(href="/questions") Questions
+        a(href="/questions", class=questions && 'active') Questions
       .nav-item
-        a(href="/registry") Registry
+        a(href="/registry", class=registry && 'active') Registry
       .nav-item
-        a(href="/rsvp") RSVP
+        a(href="/rsvp", class=rsvp && 'active') RSVP
       .nav-item
         form.inline(method="post", action="/logout")
           button.link-button(type="submit", name="submit", value="submit") Logout
