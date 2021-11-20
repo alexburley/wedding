@@ -10,11 +10,17 @@ style.
     display: inline-block;
     margin: auto;
     text-align: center;
+    line-height: 110%;
   }
 
   .banner-img {
     max-width: 250px;
+    width: 100%;
     display: inline-block;
+  }
+
+  .banner-img-container {
+    align-items: center;
   }
 
   .header {
@@ -63,6 +69,7 @@ style.
 
   .nav-item a {
     padding-bottom: 2px;
+    display: inline-block;
   }
 
   .nav .title {
@@ -83,14 +90,14 @@ style.
   }
 
 .banner.row.flex-nowrap
-  .col.banner-img-container.d-none.d-md-block
+  .col.banner-img-container.d-md-block
     img.banner-img(
       src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/flowers-left.png"
     ) 
   .col.banner-title 
-    h1.title Rebecca & Alexander
+    h1(style="line-height: 110%") Rebecca & Alexander
     h3 Healey Barn | July 23rd 2022
-  .col.banner-img-container.d-none.d-md-block
+  .col.banner-img-container.d-md-block
     img.banner-img(
       src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/flowers-right.png"
     ) 
