@@ -1,75 +1,53 @@
 module.exports = [
-  {
-    question: "What is the dress code?",
-    answer:
-      "The dress code is formal attire, if the men can avoid green suits that would also be great",
-  },
-  {
-    question:
-      "What will the weather be like / will there be time spent outside?",
-    answer:
-      "We expect the weather to be warm, there is also plenty of shelter if the weather turns.",
-  },
-  {
-    question: "Is there a quiet area?",
-    answer: "Yes, if you require use of this area then please get in touch.",
-  },
-  {
-    question: "Is there a theme?",
-    answer: "No theme",
-  },
+  ...[
+    {
+      question: "What is the dress code?",
+      answer: "Formal/semi formal attire",
+    },
+    {
+      question: "Can I film / photograph the ceremony?",
+      answer:
+        "Please do not film or photograph during the ceremony, we have a photographer and videographer on the day and will share this after, so you will be able to access footage/photos. Feel free to photograph/record anything after that.",
+    },
+    {
+      question:
+        "Who should I call if I can't make it to the wedding or will be late on the day?",
+      answer: "Please call the venue on: 01434 400 044 / 01434 682 569 ",
+    },
+    {
+      question: "Is the venue accessible?",
+      answer:
+        "For any accessibility requirements please contact the venue on 01434 400 044 / 01434 682 569 or email at enquiries@crippshealey.com ",
+    },
+    {
+      question: "When is the deadline for the RSVP?",
+      answer: "Please RSVP by 01/03/2021",
+    },
+    {
+      question: "Is there free parking?",
+      answer: "There is plenty of free parking on site",
+    },
+    {
+      question: "What is the itinerary/order of the day?",
+      answer:
+        "13:30 Day Guests Arrive, 14:00 Ceremony, 19:30 Evening Guests Arrive, 1AM Bar closes",
+    },
+    {
+      question: "What time shall I arrive?",
+      answer:
+        "Day guests should arrive around 1:30PM and evening guests from 19:30PM",
+    },
+  ].sort((a, b) => {
+    return a.question > b.question ? 1 : -1;
+  }),
   {
     question: "Can I bring a plus one?",
     answer:
       "There are no plus ones, your invite will be addressed to the invitees",
   },
   {
-    question: "Do you cater for particular food requirements?",
-    answer: "You can specify this on the RSVP form",
-  },
-  {
-    question: "Can I film / photograph the ceremony?",
+    question: "I have a question that isn't answered here",
     answer:
-      "Please do not film or photograph during the ceremony, feel free to photograph the signing of the registry and anything after that.",
+      "Feel free to text or call us on 0774338195 (Alex) or 07969564376 (Becky)",
   },
-  {
-    question: "My question is not answered here",
-    answer: "Contact us at alexburley3@live.co.uk or beckypowell84@gmail.com",
-  },
-  {
-    question:
-      "Who should I call if I can't make it to the wedding or will be late?",
-    answer: "Please call the venue on: ",
-  },
-  {
-    question: "Can I bring my child?",
-    answer: "Yes",
-  },
-  {
-    question: "What is the accessibility situation?",
-    answer: "?",
-  },
-  {
-    question: "When is the deadline for the RSVP?",
-    answer: "6 weeks before",
-  },
-  {
-    question: "What is the parking situation?",
-    answer: "Plenty",
-  },
-  {
-    question: "What is the itinerary/order of the day?",
-    answer: "xyz",
-  },
-  {
-    question: "What time shall I arrive?",
-    answer: "xyz",
-  },
-  {
-    question: "Will there be open bar and do I need cash?",
-    answer:
-      "There will be some drinks paid for and plenty for the meal, the bar does take card.",
-  },
-].sort((a, b) => {
-  return a.question > b.question ? 1 : -1;
-});
+];
