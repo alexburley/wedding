@@ -30,12 +30,12 @@ module.exports = [
     {
       question: "What is the itinerary/order of the day?",
       answer:
-        "13:30 Day Guests Arrive, 14:00 Ceremony, 19:30 Evening Guests Arrive, 1AM Bar closes",
+        "13:30 Day Guests Arrive, 14:00 Ceremony, 19:30 Evening Guests Arrive, 01:00 Bar closes",
     },
     {
       question: "What time shall I arrive?",
       answer:
-        "Day guests should arrive around 1:30PM and evening guests from 19:30PM",
+        "Day guests should arrive around 13:30PM and evening guests from 19:30",
     },
   ].sort((a, b) => {
     return a.question > b.question ? 1 : -1;
