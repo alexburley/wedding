@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const logger = require("morgan");
 const faqs = require("./faqs");
+const accom = require("./accom");
 
 const app = express();
 
@@ -49,7 +50,7 @@ router.get("/travel", (req, res) => {
   const token = req.cookies[authCookie];
   try {
     const authorised = token && jwt.verify(token, accessTokenSecret);
-    res.render("index", { authorised, travel: true });
+    res.render("index", { authorised, travel: true, accom });
   } catch (err) {
     res.render("index", { authorised: false });
   }

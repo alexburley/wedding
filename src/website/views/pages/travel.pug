@@ -1,43 +1,37 @@
 style.
-  .accomodation-intro {
-    font-size: 1.3rem;
-    margin: auto;
+  .travel-accom-card {
+    max-width: 80%;
+    margin: 50px auto;
   }
 
-  .travel-card {
-    min-width: 300px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .page-anchor {
-    margin-top: -7.5vh;
-    height: 7.5vh;
-  }
-
-  .page-footer {
-    width: 100%;
-    position: sticky;
-    background-color: #faf9f6;
-    border-top: 1px solid #d3d3d3;
-    padding: 20px 0px;
-    bottom: 0px;
-    left: 0px;
+  .travel-accom-intro {
+    font-size: 1.2rem;
     text-align: center;
   }
 
-  ul > li {
-    display: inline-block;
+  .travel-accom-items-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
   }
 
-#travel-top.page-anchor
-.container.section-container
-  #travel-accomodation.page-anchor
-  .content-card.travel-card
+  .travel-accom-items-wrapper a {
+    flex: 0 0 200px;
+  }
+
+  .travel-accom-item span {
+    //- font-family: Helvetica;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+.container
+  .content-card.travel-accom-card
     h2 Accomodation
-    br
-    .col-md-8.accomodation-intro
-      span We have listed some hotels for your conveniance, more hotels can be found closer to Newcastle which might offer flexilibity at the cost of a longer journey.
+    .travel-accom-intro
+      span We have listed some hotels for your convenience, more hotels can be found closer to Newcastle which might offer flexilibity at the cost of a longer journey.
       |
       | You can find the hotels listed and more accomodation options on the
       |
@@ -46,103 +40,9 @@ style.
         style="font-weight: bold"
       ) Healey Barn website
       | .
-    br
-    br
-    .row
-      .col
-        span Slaley Hall Hotel (7 miles)
-        p 
-          a(href="https://www.slaleyhallhotel.com", target="_blank") https://www.slaleyhallhotel.com
-        br
-      .col
-        span Beaumont Hotel (7 miles)
-        p 
-          a(href="https://www.thebeaumonthexham.co.uk", target="_blank") https://www.thebeaumonthexham.co.uk
-        br
-    .row
-      .col
-        span Derwent Manor Hotel (8 miles)
-        p 
-          a(href="https://www.bw-derwentmanorhotel.co.uk/", target="_blank") https://www.bw-derwentmanorhotel.co.uk/
-        br
-      .col
-        span The Angel Inn (8 miles)
-        p 
-          a(href="https://www.theangelofcorbridge.com", target="_blank") https://www.theangelofcorbridge.com
-        br
-    .row
-      .col
-        span The Anchor Inn (5 miles)
-        p 
-          a(href="https://www.theanchorinnwhittonstall.co.uk", target="_blank") https://www.theanchorinnwhittonstall.co.uk
-        br
-      .col
-        span The Duke of Wellington Inn (5 miles)
-        p 
-          a(href="https://www.thedukeofwellingtoninn.co.uk", target="_blank") https://www.thedukeofwellingtoninn.co.uk
-        br
-    .row
-      .col
-        span Lord Crewe Arms Hotel (10 miles)
-        p 
-          a(href="https://www.lordcrewearmsblanchland.co.uk", target="_blank") https://lordcrewearmsblanchland.co.uk
-        br
-      .col
-        span The George Hotel (15 miles)
-        p 
-          a(href="https://bespokehotels.com/the-george-hotel", target="_blank") https://bespokehotels.com/the-george-hotel
-  br
-  #travel-taxis.page-anchor
-  .content-card.travel-card
-    h2 Taxis
-    br
-    .col-md-8.accomodation-intro
-      span 
-      | We recommend you book a taxi from the venue in advance as the signal is not great
-      | once you are there.
-      | Here are some local taxi numbers.
-    br
-    br
-    .row
-      .col
-        span Slaley Hall Hotel (7 miles)
-        p 
-          a(href="https://www.slaleyhallhotel.com", target="_blank") https://www.slaleyhallhotel.com
-        br
-      .col
-        span Beaumont Hotel (7 miles)
-        p 
-          a(href="https://www.thebeaumonthexham.co.uk", target="_blank") https://www.thebeaumonthexham.co.uk
-        br
-    .row
-      .col
-        span Derwent Manor Hotel (8 miles)
-        p 
-          a(href="https://www.bw-derwentmanorhotel.co.uk/", target="_blank") https://www.bw-derwentmanorhotel.co.uk/
-        br
-      .col
-        span The Angel Inn (8 miles)
-        p 
-          a(href="https://www.theangelofcorbridge.com", target="_blank") https://www.theangelofcorbridge.com
-        br
-    .row
-      .col
-        span The Anchor Inn (5 miles)
-        p 
-          a(href="https://www.theanchorinnwhittonstall.co.uk", target="_blank") https://www.theanchorinnwhittonstall.co.uk
-        br
-      .col
-        span The Duke of Wellington Inn (5 miles)
-        p 
-          a(href="https://www.thedukeofwellingtoninn.co.uk", target="_blank") https://www.thedukeofwellingtoninn.co.uk
-        br
-    .row
-      .col
-        span Lord Crewe Arms Hotel (10 miles)
-        p 
-          a(href="https://www.lordcrewearmsblanchland.co.uk", target="_blank") https://lordcrewearmsblanchland.co.uk
-        br
-      .col
-        span The George Hotel (15 miles)
-        p 
-          a(href="https://bespokehotels.com/the-george-hotel", target="_blank") https://bespokehotels.com/the-george-hotel
+      .travel-accom-items-wrapper
+        each hotel in accom
+          a(target="#blank", href="#{hotel.link}")
+            .travel-accom-item
+              h4 #{hotel.display}
+              span #{hotel.pounds} | #{hotel.miles} miles
