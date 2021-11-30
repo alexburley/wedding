@@ -1,1 +1,29 @@
-.container
+style.
+  .registry-container {
+    text-align: center;
+    min-height: 40vh;
+  }
+  .registry-label {
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 450px;
+    padding: 10px;
+    margin: 40px auto;
+  }
+  .registry-button {
+    height: 40px;
+    width: 140px;
+    margin: auto;
+    line-height: 40px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+.container.registry-container
+  .registry-label 
+    | Our gift registry is managed by Prezola.
+    | If you would like to contribute a gift then please take a look by following the link below.
+  a(target="#blank", href="https://prezola.com/wishlists/10235155/")
+    .card.registry-button
+      span Registry Link
