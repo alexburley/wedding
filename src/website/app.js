@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const logger = require("morgan");
 const faqs = require("./faqs");
 const accom = require("./accom");
+const taxis = require("./taxis");
 
 const app = express();
 
@@ -50,7 +51,7 @@ router.get("/travel", (req, res) => {
   const token = req.cookies[authCookie];
   try {
     const authorised = token && jwt.verify(token, accessTokenSecret);
-    res.render("index", { authorised, travel: true, accom });
+    res.render("index", { authorised, travel: true, accom, taxis });
   } catch (err) {
     res.render("index", { authorised: false });
   }

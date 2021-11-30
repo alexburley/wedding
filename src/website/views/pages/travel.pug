@@ -23,7 +23,6 @@ style.
   }
 
   .travel-accom-item span {
-    //- font-family: Helvetica;
     font-size: 1rem;
     line-height: 1rem;
   }
@@ -47,3 +46,21 @@ style.
           .travel-accom-item
             h4 #{hotel.display}
             span #{hotel.pounds} | #{hotel.miles} miles
+
+  .content-card.travel-accom-card
+    h2 Travel
+    .travel-accom-intro
+      p
+        | Healey Barn is a 30 minute drive from Central Newcastle with plenty of parking
+        | on the site. Alternatively, you can find a list of taxis below.
+      p
+        | It is <b>important</b> that if you are departing via taxi that you book this in advance. The
+        | signal is not reliable at Healey and you are not guranteed to get a taxi if you are staying late.
+      p
+        | The bar shuts at <b>1AM</b> so if you are planning to stay late, please book your taxi accordingly.
+    .travel-accom-items-wrapper
+      each taxi in taxis
+        a(target="#blank", href="#{taxi.link}")
+          .travel-accom-item
+            h4 #{taxi.name}
+            span #{taxi.based}
