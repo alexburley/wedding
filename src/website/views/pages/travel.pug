@@ -10,6 +10,14 @@ style.
     padding: 30px 0px;
   }
 
+  .travel-accom-address-wrapper {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .travel-accom-address {
+  }
+
   .travel-accom-items-wrapper {
     margin-top: 20px;
     display: flex;
@@ -29,6 +37,26 @@ style.
 
 .container
   .content-card.travel-accom-card
+    h2 Travel
+    .travel-accom-intro
+      a(href="https://g.page/healeybarn?share", target="#blank")
+        .travel-accom-address-wrapper
+          | Healey Barn, Healey, Riding Mill, Northumberland, NE44 6BN
+      p
+        | Healey Barn is a 30 minute drive from Central Newcastle with plenty of parking
+        | on the site. Alternatively, you can find a list of taxis below.
+      p
+        | It is <b>important</b> that if you are departing via taxi that you book this in advance. The
+        | signal is not reliable at Healey and you are not guranteed to get a taxi if you are staying late.
+      p
+        | The bar shuts at <b>1AM</b> so if you are planning to stay late, please book your taxi accordingly.
+    .travel-accom-items-wrapper
+      each taxi in taxis
+        a(target="#blank", href="#{taxi.link}")
+          .travel-accom-item
+            h4 #{taxi.name}
+            span #{taxi.based}
+  .content-card.travel-accom-card
     h2 Accomodation
     .travel-accom-intro
       span We have listed some hotels for your convenience, more hotels can be found closer to Newcastle which might offer flexilibity at the cost of a longer journey.
@@ -46,21 +74,3 @@ style.
           .travel-accom-item
             h4 #{hotel.display}
             span #{hotel.pounds} | #{hotel.miles} miles
-
-  .content-card.travel-accom-card
-    h2 Travel
-    .travel-accom-intro
-      p
-        | Healey Barn is a 30 minute drive from Central Newcastle with plenty of parking
-        | on the site. Alternatively, you can find a list of taxis below.
-      p
-        | It is <b>important</b> that if you are departing via taxi that you book this in advance. The
-        | signal is not reliable at Healey and you are not guranteed to get a taxi if you are staying late.
-      p
-        | The bar shuts at <b>1AM</b> so if you are planning to stay late, please book your taxi accordingly.
-    .travel-accom-items-wrapper
-      each taxi in taxis
-        a(target="#blank", href="#{taxi.link}")
-          .travel-accom-item
-            h4 #{taxi.name}
-            span #{taxi.based}
