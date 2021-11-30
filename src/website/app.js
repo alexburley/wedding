@@ -8,6 +8,7 @@ const logger = require("morgan");
 const faqs = require("./faqs");
 const accom = require("./accom");
 const taxis = require("./taxis");
+const itinerary = require("./itinerary");
 
 const app = express();
 
@@ -31,7 +32,7 @@ router.get("/", (req, res) => {
   const token = req.cookies[authCookie];
   try {
     const authorised = token && jwt.verify(token, accessTokenSecret);
-    res.render("index", { authorised });
+    res.render("index", { authorised, itinerary });
   } catch (err) {
     res.render("index", { authorised: false });
   }

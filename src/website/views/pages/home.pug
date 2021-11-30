@@ -1,49 +1,51 @@
 style.
-  .home {
-    background-color: #ffff;
+  .home-itinerary {
+    max-width: 60%;
+    margin: 30px auto;
   }
 
-  .venue-container {
-    overflow: hidden;
-    height: 400px;
+  .home-itinerary-address p {
+    font-weight: 500;
+    margin: 0;
   }
 
-  .venue-container img {
-    width: 100%;
-    margin-top: -100px;
+  .home-itinerary .home-address-title {
+    font-size: 42px;
+    letter-spacing: 0.03em;
+    line-height: 110%;
+    padding-bottom: 10px;
   }
 
-  @media (min-width: 1024px) {
-    .venue-container img {
-      margin-top: -250px;
-    }
+  .home-itinerary-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
   }
 
-  .full-width {
-    left: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    max-width: 100vw;
-    position: relative;
-    right: 50%;
-    width: 100vw;
+  .home-itinerary-slot {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 10px 0;
   }
+.container
+  //-       src="https://images.squarespace-cdn.com/content/v1/5936ca4aa5790a4e6845045a/1544725075699-1QJ8HP9LQFV5EBDD0XXE/healey-barn-views.jpg?format=2500w"
+  //-       src="https://images.squarespace-cdn.com/content/v1/5936ca4aa5790a4e6845045a/1565010085848-XK78ADBGK232FAKRIPYR/_A7R7912-Edit-Edit+Richard+Kenworthy+Jan+2019+%286%29healey%2Bbarn%2Bnorthumberland%2Bwedding%2Bvenue.jpg?format=2500w"
 
-.home
-  .container.main
-    .venue-container.full-width
-      a(href="https://crippsandco.com/healey-barn", target="_blank")
-        img(
-          src="https://images.squarespace-cdn.com/content/v1/5936ca4aa5790a4e6845045a/1544725075699-1QJ8HP9LQFV5EBDD0XXE/healey-barn-views.jpg?format=2500w"
-        )
-    .section-container
-      .col-md-12.content-card
-    .venue-container.full-width
-      a(href="https://crippsandco.com/healey-barn", target="_blank")
-        img(
-          src="https://images.squarespace-cdn.com/content/v1/5936ca4aa5790a4e6845045a/1565010085848-XK78ADBGK232FAKRIPYR/_A7R7912-Edit-Edit+Richard+Kenworthy+Jan+2019+%286%29healey%2Bbarn%2Bnorthumberland%2Bwedding%2Bvenue.jpg?format=2500w"
-        )
-    .section-container
-
-//- itinerary
-//- us section
+  .content-card.home-itinerary 
+    p We have invited you to join us in celebration of our Wedding at Healey Barn
+    h4 Order of the day
+    .home-itinerary-wrapper
+      each event in itinerary
+        .home-itinerary-slot
+          span #{event.slot}
+          span #{event.label}
+    hr
+    .home-itinerary-address
+      p.home-address-title Healey Barn
+      p Healey
+      p Riding Mill
+      p Northumberland
+      p NE44 6BN
