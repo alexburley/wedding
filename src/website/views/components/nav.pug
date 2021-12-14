@@ -3,7 +3,6 @@ style.
     padding-top: 25px;
     text-align: center;
     margin: auto;
-    background-color: hsl(134, 9%, 92%);
   }
 
   .banner-title {
@@ -13,15 +12,14 @@ style.
     line-height: 110%;
   }
 
-  .header {
+  .sticky-header {
     position: sticky;
     top: 0;
     z-index: 10;
     border-bottom: 1px solid lightgray;
-    background-color: hsl(134, 9%, 92%);
   }
 
-  .nav {
+  .nav-items {
     line-height: 100%;
     font-weight: 700;
     font-size: 16px;
@@ -29,21 +27,20 @@ style.
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 40px;
-    padding-bottom: 0px;
+    padding: 0.5rem 1rem;
     flex-wrap: nowrap;
     width: 100%;
     gap: 12px;
   }
 
   @media (max-width: 400px) {
-    .nav {
+    .nav-items {
       font-size: 12px;
     }
   }
 
   @media (min-width: 768px) {
-    .nav {
+    .nav-items {
       font-size: 20px;
     }
   }
@@ -62,7 +59,7 @@ style.
     display: inline-block;
   }
 
-  .nav .title {
+  .nav-items .title {
     text-align: center;
     font-weight: 500;
     font-size: 60px;
@@ -79,23 +76,22 @@ style.
     font-size: 1em;
   }
 
-.banner.row
-  .col.banner-title 
+.banner
+  .banner-title 
     h1(style="line-height: 110%") Rebecca & Alexander
     h3 Healey Barn | July 23rd 2022
-.header
-  .navbar 
-    .nav
-      .nav-item
-        a(href="/", class=travel || questions || registry || rsvp ? '' : 'active') Home
-      .nav-item
-        a(href="/travel", class=travel && 'active') Travel and Accomodation
-      .nav-item
-        a(href="/questions", class=questions && 'active') Questions
-      .nav-item
-        a(href="/registry", class=registry && 'active') Registry
-      .nav-item
-        a(href="/rsvp", class=rsvp && 'active') RSVP
-      .nav-item
-        form.inline(method="post", action="/logout")
-          button.link-button(type="submit", name="submit", value="submit") Logout
+.sticky-header
+  .nav-items
+    .nav-item
+      a(href="/", class=travel || questions || registry || rsvp ? '' : 'active') Home
+    .nav-item
+      a(href="/travel", class=travel && 'active') Travel and Accomodation
+    .nav-item
+      a(href="/questions", class=questions && 'active') Questions
+    .nav-item
+      a(href="/registry", class=registry && 'active') Registry
+    .nav-item
+      a(href="/rsvp", class=rsvp && 'active') RSVP
+    .nav-item
+      form.inline(method="post", action="/logout")
+        button.link-button(type="submit", name="submit", value="submit") Logout
