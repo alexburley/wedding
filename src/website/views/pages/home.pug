@@ -1,13 +1,26 @@
 style.
   .home-itinerary,
   .home-aboutus {
-    max-width: 60%;
     margin: 30px auto;
   }
 
   .home-itinerary-address p {
     font-weight: 500;
     margin: 0;
+  }
+
+  .home-itinerary {
+    padding: 16px 8px;
+  }
+
+  .home-card {
+    max-width: 60%;
+  }
+
+  @media (max-width: 400px) {
+    .home-card {
+      max-width: 80%;
+    }
   }
 
   .home-itinerary .home-address-title {
@@ -34,17 +47,16 @@ style.
   }
 
   .home-aboutus-img-container {
-    width: 80%;
     margin: auto;
     margin-top: 20px;
   }
 
   .home-aboutus-img {
-    max-width: 80%;
+    width: 95%;
+    max-width: 400px;
   }
 
   .home-heroimage-card {
-    max-width: 60%;
     padding: 0;
     margin: 20px auto;
   }
@@ -52,17 +64,17 @@ style.
     max-width: 100%;
   }
 .container
-  .content-card.home-heroimage-card 
+  .content-card.home-heroimage-card.home-card 
     img.home-heroimage(
       src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey-door.jpg"
     )
-  .content-card.home-itinerary 
-    p(style="max-width: 80%; margin: auto; padding-bottom: 20px") We have invited you to join us in celebration of our Wedding at Healey Barn
+  .content-card.home-itinerary.home-card 
+    p(style="max-width: 90%; margin: auto; padding-bottom: 20px") We have invited you to join us in celebration of our Wedding at Healey Barn
     h4 Order of the day
     .home-itinerary-wrapper
       each event in itinerary
         .home-itinerary-slot
-          span #{event.slot}
+          span(style="padding-left: 16px") #{event.slot}
           span #{event.label}
     hr
     .home-itinerary-address
@@ -71,17 +83,17 @@ style.
       p Riding Mill
       p Northumberland
       p NE44 6BN
-  .content-card.home-heroimage-card 
+  .content-card.home-heroimage-card.home-card 
     img.home-heroimage(
       src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey-window.jpg"
     )
-  .content-card.home-aboutus
+  .content-card.home-aboutus.home-card
     h4 About Us
       .home-aboutus-img-container
         img.home-aboutus-img(
           src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/party-pic.jpeg"
         )
-  .content-card.home-heroimage-card 
+  .content-card.home-heroimage-card.home-card 
     img.home-heroimage(
       src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey-inside.jpg"
     )
