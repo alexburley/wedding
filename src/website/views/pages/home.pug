@@ -4,6 +4,10 @@ style.
     margin: 30px auto;
   }
 
+  .home-itinerary-address {
+    margin-bottom: 20px;
+  }
+
   .home-itinerary-address p {
     font-weight: 500;
     margin: 0;
@@ -34,7 +38,10 @@ style.
     display: flex;
     flex-direction: column;
     max-width: 300px;
+    gap: 10px;
     margin: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
   }
 
   .home-itinerary-slot {
@@ -42,7 +49,6 @@ style.
     text-align: left;
     flex-grow: 1;
     gap: 50px;
-    margin: 10px 0;
     line-height: 125%;
   }
 
@@ -68,20 +74,15 @@ style.
       src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey-door.jpg"
     )
   .content-card.home-itinerary.home-card 
-    p(style="max-width: 90%; margin: auto; padding-bottom: 20px") We have invited you to join us in celebration of our Wedding at Healey Barn
+    .home-itinerary-address
+      p.home-address-title Healey Barn
+      p Healey, Riding Mill, Northumberland, NE44 6BN
     h4 Order of the day
     .home-itinerary-wrapper
       each event in itinerary
         .home-itinerary-slot
           span(style="padding-left: 16px") #{event.slot}
           span #{event.label}
-    hr
-    .home-itinerary-address
-      p.home-address-title Healey Barn
-      p Healey
-      p Riding Mill
-      p Northumberland
-      p NE44 6BN
   .content-card.home-heroimage-card.home-card 
     img.home-heroimage(
       src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey-window.jpg"
@@ -109,6 +110,7 @@ style.
         style="width: 55%; min-width: 200px"
       )
     p Ten years later and third time lucky, we're delighted to invite you all to our big day.
+    p
       | !{' '}When looking for venues we picked Healey Barn for the amazing setting and to be close to our family homes in
       | !{' '}Durham and Chester Le Street, even if it is a long way from where we currently live in Wapping, London.
       | !{' '}That being said, one of the most important factors was the 1AM late license...
