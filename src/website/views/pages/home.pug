@@ -33,27 +33,31 @@ style.
     line-height: 125%;
   }
 
-  .home-aboutus-img {
-    background-color: grey;
+  .home-aboutus-img-container {
     width: 80%;
-    height: 200px;
     margin: auto;
     margin-top: 20px;
+  }
+
+  .home-aboutus-img {
+    max-width: 80%;
   }
 
   .home-heroimage-card {
     max-width: 60%;
     padding: 0;
-    margin: 20px auto
+    margin: 20px auto;
   }
   .home-heroimage {
-    max-width: 100%  
+    max-width: 100%;
   }
 .container
   .content-card.home-heroimage-card 
-      img.home-heroimage(src="/public/images/healey-door.jpg")
+    img.home-heroimage(
+      src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey-door.jpg"
+    )
   .content-card.home-itinerary 
-    p We have invited you to join us in celebration of our Wedding at Healey Barn
+    p(style="max-width: 80%; margin: auto; padding-bottom: 20px") We have invited you to join us in celebration of our Wedding at Healey Barn
     h4 Order of the day
     .home-itinerary-wrapper
       each event in itinerary
@@ -68,9 +72,16 @@ style.
       p Northumberland
       p NE44 6BN
   .content-card.home-heroimage-card 
-      img.home-heroimage(src="/public/images/healey-window.jpg")
+    img.home-heroimage(
+      src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey-window.jpg"
+    )
   .content-card.home-aboutus
     h4 About Us
-    .home-aboutus-img
+      .home-aboutus-img-container
+        img.home-aboutus-img(
+          src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/party-pic.jpeg"
+        )
   .content-card.home-heroimage-card 
-      img.home-heroimage(src="/public/images/healey-inside.jpg")
+    img.home-heroimage(
+      src="https://wedding-website-images-burlzad.s3.eu-west-2.amazonaws.com/images/healey-inside.jpg"
+    )
