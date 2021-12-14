@@ -11,7 +11,7 @@ style.
   }
 
   .home-itinerary .home-address-title {
-    font-size: 42px;
+    font-size: 2rem;
     letter-spacing: 0.03em;
     line-height: 110%;
     padding-bottom: 10px;
@@ -40,9 +40,18 @@ style.
     margin: auto;
     margin-top: 20px;
   }
+
+  .home-heroimage-card {
+    max-width: 60%;
+    padding: 0;
+    margin: 20px auto
+  }
+  .home-heroimage {
+    max-width: 100%  
+  }
 .container
-  //-       src="https://images.squarespace-cdn.com/content/v1/5936ca4aa5790a4e6845045a/1544725075699-1QJ8HP9LQFV5EBDD0XXE/healey-barn-views.jpg?format=2500w"
-  //-       src="https://images.squarespace-cdn.com/content/v1/5936ca4aa5790a4e6845045a/1565010085848-XK78ADBGK232FAKRIPYR/_A7R7912-Edit-Edit+Richard+Kenworthy+Jan+2019+%286%29healey%2Bbarn%2Bnorthumberland%2Bwedding%2Bvenue.jpg?format=2500w"
+  .content-card.home-heroimage-card 
+      img.home-heroimage(src="/public/images/healey-door.jpg")
   .content-card.home-itinerary 
     p We have invited you to join us in celebration of our Wedding at Healey Barn
     h4 Order of the day
@@ -58,6 +67,10 @@ style.
       p Riding Mill
       p Northumberland
       p NE44 6BN
+  .content-card.home-heroimage-card 
+      img.home-heroimage(src="/public/images/healey-window.jpg")
   .content-card.home-aboutus
     h4 About Us
     .home-aboutus-img
+  .content-card.home-heroimage-card 
+      img.home-heroimage(src="/public/images/healey-inside.jpg")
