@@ -35,6 +35,7 @@ style.
   .gmaps {
     padding: 0;
     margin: auto;
+    margin-bottom: 20px;
     height: 400px;
     max-width: 80%;
   }
@@ -48,7 +49,7 @@ style.
   .content-card.travel-accom-card
     h2 Travel
     .travel-accom-intro
-      a(href="https://g.page/healeybarn?share", target="#blank")
+      a(href="https://g.page/healeybarn?share", target="_blank")
         .travel-accom-address-wrapper
           | Healey Barn, Healey, Riding Mill, Northumberland, NE44 6BN
       p
@@ -61,17 +62,10 @@ style.
         | The bar shuts at <b>1AM</b> so if you are planning to stay late, please book your taxi accordingly.
     .travel-accom-items-wrapper
       each taxi in taxis
-        a(target="#blank", href="#{taxi.link}")
+        a(target="_blank", href=taxi.link)
           .travel-accom-item
             h4 #{taxi.name}
             span #{taxi.based}
-  .content-card.gmaps
-    iframe(
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2292.9024412635317!2d-1.985935048841519!3d54.922184063114585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487dcfbd9c8fa2f7%3A0x28950d2e4b323dc8!2sHealey%20Barn!5e0!3m2!1sen!2suk!4v1639509228915!5m2!1sen!2suk",
-      style="border: 0",
-      allowfullscreen="",
-      loading="lazy"
-    )
   .content-card.travel-accom-card
     h2 Accomodation
     .travel-accom-intro
@@ -86,7 +80,14 @@ style.
       | .
     .travel-accom-items-wrapper
       each hotel in accom
-        a(target="#blank", href="#{hotel.link}")
+        a(target="_blank", href=hotel.link)
           .travel-accom-item
             h4 #{hotel.display}
             span #{hotel.pounds} | #{hotel.miles} miles
+  .content-card.gmaps
+    iframe(
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2292.9024412635317!2d-1.985935048841519!3d54.922184063114585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487dcfbd9c8fa2f7%3A0x28950d2e4b323dc8!2sHealey%20Barn!5e0!3m2!1sen!2suk!4v1639509228915!5m2!1sen!2suk",
+      style="border: 0",
+      allowfullscreen="",
+      loading="lazy"
+    )
