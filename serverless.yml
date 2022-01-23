@@ -24,7 +24,7 @@ plugins:
 custom:
   customDomain:
     domainName: "burleywedding.co.uk"
-    certificateArn: "arn:aws:acm:us-east-1:557482387627:certificate/d53c7440-8b36-4fa1-a20e-68c3b8369cf9"
+    certificateArn: "arn:aws:acm:eu-west-2:557482387627:certificate/78ed1900-6323-417d-9c3e-0da084c2903a"
     stage: main
     createRoute53Record: true
     autoDomain: true
