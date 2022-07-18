@@ -1,6 +1,10 @@
 module.exports = [
   ...[
     {
+      question: "Is it cash or card at the bar?",
+      answer: "Card only",
+    },
+    {
       question: "What is the dress code?",
       answer: "Formal/semi formal attire",
     },
