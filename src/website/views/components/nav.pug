@@ -88,7 +88,7 @@ style.
 .sticky-header
   .nav-items
     .nav-item
-      a(href="/", class=travel || questions || registry || rsvp ? '' : 'active') Home
+      a(href="/", class=travel || questions || registry || photos ? '' : 'active') Home
     .nav-item
       a(href="/travel", class=travel && 'active') Travel and Accomodation
     .nav-item
@@ -96,7 +96,7 @@ style.
     .nav-item
       a(href="/registry", class=registry && 'active') Registry
     .nav-item
-      a(href="/rsvp", class=rsvp && 'active') RSVP
+      a(href="/photos", class=photos && 'active') Photos
     .nav-item
       form.inline(method="post", action="/logout")
         button.link-button(type="submit", name="submit", value="submit") Logout
